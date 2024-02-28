@@ -1,5 +1,8 @@
 package com.aniket.work.core;
 
+/**
+ * Class representing a state within the state machine.
+ */
 public class FSMStateHolder {
 
     private final String fsmStateName;

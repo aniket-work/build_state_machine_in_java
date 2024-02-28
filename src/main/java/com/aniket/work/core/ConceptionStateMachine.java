@@ -2,9 +2,19 @@ package com.aniket.work.core;
 
 import java.util.Set;
 
+/**
+ * Interface representing a state machine.
+ */
 public interface ConceptionStateMachine {
 
-    FSMStateHolder trigger(Event event) throws  FSMException;
+    /**
+     * Triggers the state machine with the given event.
+     *
+     * @param event the event to trigger
+     * @return the state holder after the trigger
+     * @throws FSMException if an error occurs during the state transition
+     */
+    FSMStateHolder trigger(Event event) throws FSMException;
 
     FSMStateHolder getInitialState();
 

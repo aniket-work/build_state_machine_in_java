@@ -1,5 +1,8 @@
 package com.aniket.work.core;
 
+/**
+ * Class for storing event-related statistics.
+ */
 public class EventStatStore {
 
     private String eventContext;
