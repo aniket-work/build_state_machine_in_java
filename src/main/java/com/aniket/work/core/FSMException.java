@@ -16,5 +16,8 @@ public class FSMException extends Exception {
     public FSMException(Throwable cause) {
         super(cause);
     }
+
+    public FSMException(Shift transition, Event event, Exception e) {
+    }
 }
 

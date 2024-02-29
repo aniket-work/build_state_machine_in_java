@@ -20,7 +20,7 @@ public interface ConceptionStateMachine {
 
     FSMStateHolder getCurrentState();
 
-    FSMStateHolder getFinalState();
+    Set<FSMStateHolder> getFinalState();
 
     Set<FSMStateHolder> getAllRegisteredStates();
 

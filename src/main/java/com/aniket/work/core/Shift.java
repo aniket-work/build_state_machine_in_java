@@ -13,5 +13,5 @@ public interface Shift {
 
     Class<? extends Event> getTriggeredEventNature();
 
-    TriggerHandler<?> getTriggerHandler();
+    TriggerHandler<Event> getTriggerHandler();
 }
