@@ -12,5 +12,5 @@ public interface TriggerHandler<E extends Event> {
      * @return event statistics
      * @throws FSMException if an error occurs during event handling
      */
-    EventStatStore handleEventTrigger(E event) throws FSMException;
+    EventStatStore handleEventTrigger(Event event) throws FSMException;
 }
