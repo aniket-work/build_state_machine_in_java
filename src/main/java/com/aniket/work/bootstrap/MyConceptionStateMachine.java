@@ -21,7 +21,8 @@ public class MyConceptionStateMachine implements ConceptionStateMachine {
         this.initialState   = initialState;
         this.finalStates    = new HashSet<>();
         this.states         = states;
-        this.shifts = new HashSet<>();
+        this.currentState   = initialState;
+        this.shifts         = new HashSet<>();
     }
 
     /**
@@ -112,7 +113,7 @@ public class MyConceptionStateMachine implements ConceptionStateMachine {
      * @return
      */
     @Override
-    public Set<FSMStateHolder> getAllRegisteredStates() {
+    public Set<FSMStateHolder> getAllRecordedStates() {
         return states;
     }
 
@@ -138,6 +139,24 @@ public class MyConceptionStateMachine implements ConceptionStateMachine {
     @Override
     public Set<Shift> getAllShifts() {
         return shifts;
+    }
+
+    @Override
+    public void recordShift(final Shift shift) {
+        shifts.add(shift);
+    }
+
+    /**
+     * @param states
+     */
+    @Override
+    public void recordFinalState(Set<FSMStateHolder> states) {
+
+    }
+
+    @Override
+    public void recordFinalState(final FSMStateHolder state){
+        finalStates.add(state);
     }
 
     /**

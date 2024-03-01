@@ -5,7 +5,7 @@ package com.aniket.work.core;
  */
 public interface Shift {
 
-    String ShiftName();
+    String shiftName();
 
     FSMStateHolder getFromState();
 
@@ -13,5 +13,5 @@ public interface Shift {
 
     Class<? extends Event> getTriggeredEventNature();
 
-    TriggerHandler<Event> getTriggerHandler();
+    TriggerHandler getTriggerHandler();
 }

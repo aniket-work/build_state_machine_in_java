@@ -1,5 +1,7 @@
 package com.aniket.work.core;
 
+import com.aniket.work.bootstrap.StateMachineCreator;
+
 import java.util.Set;
 
 /**
@@ -22,7 +24,7 @@ public interface ConceptionStateMachine {
 
     Set<FSMStateHolder> getFinalState();
 
-    Set<FSMStateHolder> getAllRegisteredStates();
+    Set<FSMStateHolder> getAllRecordedStates();
 
     Shift getLatestShift();
 
@@ -30,6 +32,11 @@ public interface ConceptionStateMachine {
 
     Set<Shift> getAllShifts();
 
+    void recordFinalState(FSMStateHolder state);
+
     Event getLatestEvent();
 
+    void recordShift(final Shift shift);
+
+    void recordFinalState(final Set<FSMStateHolder> states);
 }
